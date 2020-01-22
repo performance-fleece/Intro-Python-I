@@ -3,8 +3,21 @@
 
 # YOUR CODE HERE
 
+
+class LatLong:
+    def __init__(self, lat, lon):
+        self.lat = lat
+        self.lon = lon
+    pass
+
 # Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
 # constructor. It should inherit from LatLon. Look up the `super` method.
+
+
+class Waypoint:
+    def __init__(self, name)
+    self.name = name
+    super().__init__(lat, lon)
 
 # YOUR CODE HERE
 
@@ -16,6 +29,7 @@
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 
 # YOUR CODE HERE
+
 
 # Without changing the following line, how can you make it print into something
 # more human-readable? Hint: Look up the `object.__str__` method
