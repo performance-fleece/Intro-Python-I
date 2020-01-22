@@ -19,6 +19,36 @@ and does the following:
    Then exit the program.
 """
 
+import getopt
 import sys
 import calendar
 from datetime import datetime
+
+c = calendar.TextCalendar(calendar.SUNDAY)
+
+
+x = datetime.now()
+current_year = x.year
+current_month = x.month
+
+print('Argument list:', str(sys.argv))
+print('Number of args', len(sys.argv))
+
+
+def cal_function(yy=current_year, mm=current_month):
+    try:
+        if len(sys.argv) == 1:
+            return c.formatmonth(current_year, current_month)
+    #        return c.formatmonth(current_year, current_month)
+        elif len(sys.argv) == 2:
+            return c.formatmonth(current_year, int(sys.argv[1]))
+          # return 'Month provided', sys.argv[1]
+        elif len(sys.argv) == 3:
+            return c.formatmonth(int(sys.argv[2]), int(sys.argv[1]))
+    #        return 'Month and year provided', sys.argv[1], sys.argv[2]
+    #        return c.formatmonth(current_year, sys.argv[1])
+    except:
+        return 'Please provide a numerical month and year(optional), ex: py 14_cal.py month year'
+
+
+print(cal_function())
