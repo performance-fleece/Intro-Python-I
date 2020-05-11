@@ -38,10 +38,9 @@ curr_year = datetime.now().year
 
 calendar.setfirstweekday(calendar.SUNDAY)
 
-print("Number of arguments: ", len(sys.argv))
-print("The arguments are: ", str(sys.argv))
-print(sys.argv[1])
-# print(calendar.month(curr_year, curr_month))
+# print("Number of arguments: ", len(sys.argv))
+# print("The arguments are: ", str(sys.argv))
+# print(sys.argv[1])
 
 
 def print_cal(yy=curr_year, mm=curr_month):
